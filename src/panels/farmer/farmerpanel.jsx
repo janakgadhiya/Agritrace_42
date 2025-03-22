@@ -41,6 +41,7 @@ const FarmerPanel = () => {
   return (
     <div className="farmer-panel-container">
       <aside className="farmer-sidebar">
+        <img src="./farmer.jpg" alt="Farmer Avatar" className="farmer-avatar" />
         <h2>Farmer Panel</h2>
         <ul>
           <li onClick={() => setActiveSection("profile")}>Update Profile</li>

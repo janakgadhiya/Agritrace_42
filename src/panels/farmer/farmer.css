@@ -149,6 +149,16 @@
   .panel-section button:hover {
     background-color: #3a9b40;
   }
+  .farmer-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto 15px auto;
+    border: 3px solid white;
+    object-fit: cover;
+  }
+  
   
   /* Responsive */
   @media (max-width: 768px) {
