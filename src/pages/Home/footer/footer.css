@@ -81,6 +81,10 @@
     text-decoration: none;
     transition: 0.2s;
 }
+.fcontact h3{
+    color: #66bb6a;
+    font-size: 1.5rem;
+}
 
 .fmenu a:hover {
     color: #66bb6a;
@@ -113,7 +117,7 @@
 }
 
 .fsubscribe p {
-    color: #999;
+    color: white;
     margin-bottom: 0.6rem;
     font-size: 0.85rem;
 }
@@ -167,7 +171,7 @@
     text-align: center;
     margin-top: 1rem;
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.2);
+    color: white;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
     padding-top: 0.6rem;
 }
