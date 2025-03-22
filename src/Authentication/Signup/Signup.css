@@ -1,47 +1,91 @@
-/* Center the container and make it responsive */
 .signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(135deg, #1a1a1a, #000);
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
   padding: 20px;
 }
 
-/* Signup Card */
-.signup-card {
-  background: #222;
-  padding: 40px 30px;
-  border-radius: 15px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
-  text-align: center;
-  max-width: 400px;
+.signup-wrapper {
+  display: flex;
+  background: #fff;
+  border-radius: 25px;
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.15);
+  max-width: 650px; /* Smaller, tighter card */
   width: 100%;
-  transition: all 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.3s ease;
 }
 
-.signup-card:hover {
-  transform: translateY(-5px);
+.signup-wrapper:hover {
+  transform: scale(1.02);
 }
 
-/* Toggle Buttons */
+.company-side {
+  background: #f0f0f0;
+  padding: 30px 20px;
+  text-align: center;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+}
+
+.company-side img {
+  width: 80px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.company-side h1 {
+  color: #4caf50;
+  font-size: 20px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.signup-card {
+  width: 60%;
+  padding: 30px 25px;
+  background: #fff;
+  text-align: center;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+.signup-card h2 {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.signup-card p {
+  color: #777;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
 .toggle-buttons {
   display: flex;
   justify-content: center;
-  margin-bottom: 25px;
-  gap: 12px;
-  flex-wrap: wrap;
+  margin-bottom: 20px;
+  gap: 10px;
 }
 
 .toggle-buttons button {
-  padding: 10px 22px;
+  padding: 8px 18px;
   border: 2px solid #4caf50;
-  border-radius: 25px;
+  border-radius: 20px;
   background: transparent;
   color: #4caf50;
   font-weight: 600;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 13px;
   transition: all 0.3s ease;
 }
 
@@ -49,178 +93,159 @@
 .toggle-buttons button:hover {
   background-color: #4caf50;
   color: #fff;
-  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
 }
 
-/* Headings & text */
-.signup-card h2 {
-  font-size: 24px;
-  font-weight: 700;
-  margin-bottom: 8px;
-  color: #fff;
-}
-
-.signup-card p {
-  color: #aaa;
-  font-size: 14px;
-  margin-bottom: 25px;
-}
-
-/* Input Groups */
-.signup-card .input-group {
+.input-group {
   text-align: left;
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 }
 
-.signup-card .input-group label {
-  font-size: 13px;
+.input-group label {
+  font-size: 12px;
   font-weight: 600;
-  color: #ccc;
-  margin-bottom: 5px;
+  color: #555;
+  margin-bottom: 4px;
   display: block;
 }
 
-.signup-card .input-group input {
+.input-group input {
   width: 100%;
-  padding: 12px 10px;
-  border: 1px solid #444;
-  background: #333;
-  color: #fff;
-  border-radius: 8px;
-  font-size: 14px;
+  padding: 10px 8px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  color: #333;
+  border-radius: 6px;
+  font-size: 13px;
   transition: border-color 0.3s ease;
 }
 
-.signup-card .input-group input:focus {
+.input-group input:focus {
   outline: none;
   border-color: #4caf50;
 }
 
-/* Password visibility icon styling */
-.signup-card .password-group {
+.password-input {
   position: relative;
-}
-
-.signup-card .password-group .password-input {
   display: flex;
   align-items: center;
-  position: relative;
 }
 
-.signup-card .password-group .password-input input {
-  flex: 1;
+.password-input input {
+  width: 100%;
 }
 
-.signup-card .password-group .password-input span {
+.password-input span {
   cursor: pointer;
   position: absolute;
   right: 10px;
-  font-size: 18px;
-  color: #bbb;
+  font-size: 16px;
+  color: #999;
   transition: color 0.3s;
 }
 
-.signup-card .password-group .password-input span:hover {
+.password-input span:hover {
   color: #4caf50;
 }
 
-/* Signup button */
-.signup-card .signup-btn {
+.signup-btn {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background: #4caf50;
   color: #fff;
   border: none;
-  border-radius: 25px;
-  font-size: 16px;
+  border-radius: 20px;
+  font-size: 15px;
   cursor: pointer;
   transition: all 0.3s;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
-.signup-card .signup-btn:hover {
+.signup-btn:hover {
   background: #388e3c;
-  box-shadow: 0 5px 20px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 4px 15px rgba(76, 175, 80, 0.35);
 }
 
-/* Separator with lines */
-.signup-card .separator {
-  margin: 25px 0;
-  font-size: 14px;
-  color: #777;
+.separator {
+  margin: 20px 0;
+  font-size: 13px;
+  color: #aaa;
   position: relative;
   text-align: center;
 }
 
-.signup-card .separator::before,
-.signup-card .separator::after {
+.separator::before,
+.separator::after {
   content: "";
   position: absolute;
   top: 50%;
-  width: 40%;
+  width: 38%;
   height: 1px;
-  background: #444;
+  background: #ccc;
 }
 
-.signup-card .separator::before {
+.separator::before {
   left: 0;
 }
 
-.signup-card .separator::after {
+.separator::after {
   right: 0;
 }
 
-/* Google button styling */
-.signup-card .google-btn {
+.google-btn {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   background: #db4437;
   color: #fff;
   border: none;
-  border-radius: 25px;
-  font-size: 15px;
+  border-radius: 20px;
+  font-size: 14px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
   cursor: pointer;
   transition: all 0.3s;
 }
 
-.signup-card .google-btn:hover {
+.google-btn:hover {
   background: #c1351d;
-  box-shadow: 0 4px 15px rgba(219, 68, 55, 0.4);
+  box-shadow: 0 3px 12px rgba(219, 68, 55, 0.4);
 }
 
-/* Login link at the bottom */
-.signup-card .signup-link {
-  margin-top: 20px;
-  font-size: 14px;
-  color: #ccc;
+.signup-link {
+  margin-top: 18px;
+  font-size: 13px;
+  color: #555;
 }
 
-.signup-card .signup-link a {
+.signup-link a {
   color: #4caf50;
   font-weight: 600;
   text-decoration: none;
   transition: color 0.3s;
 }
 
-.signup-card .signup-link a:hover {
+.signup-link a:hover {
   text-decoration: underline;
   color: #388e3c;
 }
 
-/* Responsive adjustments */
-@media (max-width: 500px) {
+@media (max-width: 650px) {
+  .signup-wrapper {
+    flex-direction: column;
+    max-width: 350px;
+  }
+
+  .company-side {
+    width: 100%;
+    border-radius: 25px 25px 0 0;
+    padding: 20px;
+  }
+
   .signup-card {
-    padding: 30px 20px;
-  }
-  .toggle-buttons {
-    gap: 8px;
-  }
-  .toggle-buttons button {
-    padding: 8px 15px;
-    font-size: 13px;
+    width: 100%;
+    padding: 25px 20px;
+    border-radius: 0 0 25px 25px;
   }
 }
