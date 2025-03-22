@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  
+  .contact-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  /* Header Styling */
+  .header {
+    background-color: #4CAF50;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+  }
+  
+  .header h1 {
+    font-size: 28px;
+  }
+  
+  .header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: 500;
+  }
+  
+  .header nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Contact Form Section */
+  .contact-form-section {
+    flex: 1;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e9f5e9, #f6fff6);
+    text-align: center;
+  }
+  
+  .contact-form-section h2 {
+    font-size: 34px;
+    color: #2f4f2f;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form-section p {
+    margin-bottom: 40px;
+    color: #5d7a5d;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+  }
+  
+  .contact-form button {
+    padding: 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Footer Styling */
+  .footer {
+    background-color: #2f4f2f;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: auto;
+  }
+  
+  .footer .socials {
+    margin-top: 10px;
+  }
+  
+  .footer .socials a {
+    color: #c8f5c8;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+  
+  .footer .socials a:hover {
+    color: white;
+  }
+  
+  /* Responsive Styles */
+  @media screen and (max-width: 768px) {
+    .contact-form {
+      padding: 30px 20px;
+    }
+  
+    .header {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .header nav a {
+      margin: 5px 10px;
+    }
+  }
+  

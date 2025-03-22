@@ -21,16 +21,12 @@ const Header = () => {
           <span className="company-name">AgriTrace</span>
         </div>
 
-        <OutsideClickHandler
-          onOutsideClick={() => {
-            setMenuOpened(false);
-          }}
-        >
+        <OutsideClickHandler onOutsideClick={() => setMenuOpened(false)}>
           <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
-            <a href="#">Home</a>
-            <a href="#">Field Register</a>
-            <a href="#">About Us</a>
-            <a href="#">Contact Us</a>
+            <Link to="/home">Home</Link>
+            <Link to="/fieldregister">Field Register</Link>
+            <Link to="/aboutus">About Us</Link>
+            <Link to="/contactus">Contact Us</Link>
             <button className="button sign-in-btn">
               <Link to="/signup">Sign Up</Link>
             </button>

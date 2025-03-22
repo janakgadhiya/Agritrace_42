@@ -9,6 +9,8 @@ import Value from "./pages/Home/value/value";
 import Contact from "./pages/Home/contact/contact";
 import Features from "./pages/Home/features/features";
 import CTA from "./pages/Home/cta/Cta";
+import AboutUs from "./pages/Home/Aboutus";
+import ContactUs from "./pages/contactpage/contactus";
 
 function Home() {
   return (
@@ -35,6 +37,14 @@ const router = createBrowserRouter([
   {
     path: "/home",
     element: <Home />,
+  },
+  {
+    path: "/aboutus",
+    element: <AboutUs/>,
+  },
+  {
+    path: "/contactus",
+    element: <ContactUs/>,
   }
 ]);
 
