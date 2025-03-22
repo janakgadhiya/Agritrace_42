@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./admin.css";
+import "./adminlogin.css";
 import { FaUserCircle } from "react-icons/fa";
 
 const AdminLogin = ({ onLogin }) => {
