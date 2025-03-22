@@ -1,0 +1,181 @@
+.c-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Make both sides stretch full height */
+    gap: 3rem; /* ✅ Added gap between image and left-side content */
+    width: 100%;
+  }
+  
+  .c-container > div {
+    flex: 1;
+  }
+  
+  .cright {
+    width: 100%;
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+  }
+  
+  .cright .image-container {
+    border: 8px solid rgba(204, 255, 204, 0.8);
+    border-radius: 50% 50% 0 0; /* ✅ Half-cylinder shape */
+    overflow: hidden;
+    width: 100%;
+    height: 100%; /* Stretch full height of parent */
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cright .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: inherit;
+  }
+  
+  .cright .image-container:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(76, 175, 80, 0.25);
+  }
+  
+  .cleft {
+    gap: 0.5rem;
+  }
+  
+  .conmodes {
+    margin-top: 2rem;
+    gap: 1.5rem;
+  }
+  
+  .conmodes .row {
+    display: flex;
+    gap: 1.5rem;
+    width: 100%;
+  }
+  
+  .mode {
+    width: 16rem;
+    padding: 1rem;
+    border: 1px solid rgba(76, 175, 80, 0.2);
+    border-radius: 10px;
+    background-color: #fff;
+    gap: 1rem;
+    transition: all 300ms ease;
+    cursor: pointer;
+  }
+  
+  .mode .button {
+    width: 100%;
+    background: #4caf50;
+    color: #fff;
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+  }
+  
+  .mode .button:hover {
+    background: linear-gradient(135deg, #43a047, #66bb6a);
+    transform: scale(0.95);
+  }
+  
+  .mode > :nth-child(1) {
+    width: 100%;
+    gap: 1.6rem;
+  }
+  
+  .mode .detail .ptext {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #2e7d32;
+  }
+  
+  .mode:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 24px rgba(76, 175, 80, 0.2);
+  }
+  
+  .mode .icon {
+    padding: 10px;
+    background: #eaf9ec;
+    border-radius: 50%;
+    border: 1px solid rgba(76, 175, 80, 0.3);
+  }
+  
+  .icon svg {
+    fill: #4caf50;
+  }
+  
+  .stext {
+    color: #555;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+  
+  /* Responsive */
+  @media (max-width: 1024px) {
+    .c-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 2rem;
+    }
+  
+    .cright {
+      justify-content: center;
+      margin-top: 2rem;
+    }
+  
+    .cright .image-container {
+      height: auto;
+      max-width: 100%;
+      border-radius: 50% 50% 0 0;
+    }
+  
+    .conmodes {
+      width: 100%;
+    }
+  
+    .row {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .mode {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .mode .detail .ptext {
+      font-size: 1rem;
+    }
+  
+    .mode .icon {
+      padding: 8px;
+    }
+  
+    .cright .image-container {
+      max-width: 100%;
+      border-radius: 50% 50% 0 0;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .mode .detail .ptext {
+      font-size: 0.95rem;
+    }
+  
+    .mode {
+      padding: 0.8rem;
+    }
+  
+    .cright .image-container {
+      max-width: 100%;
+      border-radius: 50% 50% 0 0;
+    }
+  }
+  

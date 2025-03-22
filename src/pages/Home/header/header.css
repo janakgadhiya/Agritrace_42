@@ -1,0 +1,180 @@
+:root {
+  --main-bg: #0d0d0d;
+  --text-light: #ffffff;
+  --hover-color: #4caf50;
+  --underline-color: #4caf50;
+  --company-font: "Poppins", sans-serif;
+}
+
+.h-wrapper {
+  background-color: var(--main-bg);
+  color: var(--text-light);
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.imglogo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+  object-fit: cover;
+}
+
+.logo-section {
+  display: flex;
+  align-items: center;
+}
+
+.company-name {
+  font-family: var(--company-font);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-light);
+  letter-spacing: 1px;
+}
+
+.h-container {
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+}
+
+.h-menu {
+  gap: 2rem;
+}
+
+.h-menu a {
+  color: var(--text-light);
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease-in-out;
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.h-menu a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background-color: var(--underline-color);
+  transition: width 0.3s ease-in-out;
+}
+
+.h-menu a:hover::after {
+  width: 100%;
+}
+
+.h-menu a:hover {
+  color: var(--hover-color);
+}
+
+.h-menu > *:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+}
+
+.sign-in-btn {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  border: none;
+  padding: 0.6rem 1.6rem;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+}
+
+.sign-in-btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.sign-in-btn:hover {
+  background: linear-gradient(135deg, #2e7d32, #4caf50);
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.4);
+  transform: scale(1.05);
+}
+
+/* Mobile Menu Icon */
+.menuicon {
+  display: none;
+  cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 786px) {
+  .menuicon {
+    display: block;
+  }
+  .sign-in-btn {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.95rem;
+    width: 100%;
+    text-align: center;
+  }
+
+  .h-menu {
+    z-index: 99;
+    color: var(--main-bg);
+    position: absolute;
+    top: 4rem;
+    right: 2rem;
+    background: #ffffff;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 2rem;
+    border-radius: 10px;
+    align-items: flex-start;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 300ms ease-in;
+  }
+
+  .h-menu a {
+    color: #000000;
+  }
+
+  .h-menu a::after {
+    background-color: var(--hover-color);
+  }
+
+  .h-menu a:hover {
+    color: var(--hover-color);
+  }
+
+  .h-menu button {
+    align-self: stretch;
+  }
+
+  .company-name {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .company-name {
+    font-size: 1.1rem;
+  }
+
+  .h-menu {
+    right: 1rem;
+    padding: 1.5rem;
+  }
+  .sign-in-btn {
+    width: 100%;
+    text-align: center;
+    padding: 0.7rem 0;
+    font-size: 1rem;
+  }
+  .h-menu a {
+    font-size: 0.9rem;
+  }
+}

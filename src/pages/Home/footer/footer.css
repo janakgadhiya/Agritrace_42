@@ -1,0 +1,197 @@
+/* Footer Wrapper */
+.fwrapper {
+    background: #0b0b0b;
+    color: #e0e0e0;
+    padding: 0.8rem 0; /* Smaller padding */
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Footer Container */
+.fcontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1.5rem; /* smaller gap */
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+/* Left Section */
+.fleft img {
+    margin-bottom: 0.4rem;
+    width: 80px; /* smaller logo */
+}
+
+.stext {
+    color: #a0a0a0;
+    font-size: 0.85rem; /* smaller text */
+    line-height: 1.4;
+    margin-bottom: 0.6rem;
+}
+
+/* Social Icons */
+.social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 0.4rem;
+}
+
+.social-icons a {
+    color: #4caf50;
+    font-size: 1.1rem;
+    background: rgba(255, 255, 255, 0.04);
+    padding: 5px;
+    border-radius: 50%;
+    transition: 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #66bb6a;
+    transform: scale(1.08);
+}
+
+/* Contact & Menu */
+.fright .ptext {
+    font-size: 1.05rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.fright p {
+    color: #b0b0b0;
+    margin-bottom: 0.3rem;
+    font-size: 0.85rem;
+}
+
+.fmenu {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-top: 0.6rem;
+}
+
+.fmenu a {
+    font-size: 0.95rem;
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.fmenu a:hover {
+    color: #66bb6a;
+    transform: translateX(2px);
+}
+
+.fmenu button {
+    margin-top: 0.5rem;
+    padding: 6px 12px;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: 0.2s ease;
+}
+
+.fmenu button:hover {
+    transform: scale(1.03);
+}
+
+/* Subscribe Section */
+.fsubscribe .ptext {
+    font-size: 1.05rem;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.fsubscribe p {
+    color: #999;
+    margin-bottom: 0.6rem;
+    font-size: 0.85rem;
+}
+
+.subscribe-bar {
+    display: flex;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+.subscribe-bar input {
+    flex: 1;
+    padding: 6px 8px;
+    border: none;
+    outline: none;
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.subscribe-bar input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.subscribe-bar button {
+    padding: 6px 10px;
+    background: linear-gradient(135deg, #4caf50, #66bb6a);
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.2s;
+    color: #fff;
+}
+
+.subscribe-bar button:hover {
+    background: linear-gradient(135deg, #66bb6a, #4caf50);
+}
+
+/* Divider Line */
+.fcontainer::before {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    margin-bottom: 1rem;
+}
+
+/* Copyright */
+.copy {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
+    padding-top: 0.6rem;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .fcontainer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.2rem;
+    }
+
+    .fleft img {
+        width: 70px;
+    }
+
+    .subscribe-bar {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    .subscribe-bar input, .subscribe-bar button {
+        width: 100%;
+        border-radius: 4px;
+    }
+}

@@ -1,0 +1,168 @@
+.v-wrapper {
+  width: 100%;
+  padding: 50px 0;
+  min-height: 100vh; /* Ensure section height covers the full viewport */
+}
+
+.v-container {
+  display: flex;
+  align-items: stretch; /* Makes child divs stretch full height */
+  width: 100%;
+  gap: 3rem; /* ✅ Added gap between image and right-side content */
+}
+
+.v-container > div {
+  flex: 1;
+}
+
+.v-container .vleft {
+  display: flex;
+  align-items: stretch;
+}
+
+.v-container .image-container {
+  border: 8px solid rgba(204, 255, 204, 0.8);
+  border-radius: 50% 50% 0 0; /* Half-cylinder shape */
+  overflow: hidden;
+  width: 100%;
+  height: 100%; /* Stretch full height of parent */
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+}
+
+.v-container .image-container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 30px rgba(76, 175, 80, 0.25);
+}
+
+.v-right {
+  gap: 0.5rem;
+}
+
+.custom-accordion {
+  margin-top: 2rem;
+}
+
+.accordion-item {
+  background: white;
+  border: 1px solid rgba(76, 175, 80, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.accordion-item.expanded {
+  box-shadow: 0 6px 20px rgba(76, 175, 80, 0.15);
+  border: 1px solid #4caf50;
+}
+
+.accordion-header {
+  background: white;
+  padding: 1rem;
+  width: 100%;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.accordion-header:hover {
+  background: #e8f9ec;
+}
+
+.icon {
+  padding: 10px;
+  background: #ebffef;
+  border-radius: 50%;
+  border: 2px solid #4caf50;
+}
+
+.icon svg {
+  fill: #4caf50;
+}
+
+.accordion-header .ptext {
+  font-size: 1.2rem;
+  flex: 1;
+  margin-left: 10px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+.accordion-panel {
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 1rem;
+}
+
+.accordion-panel p {
+  margin: 1rem 0;
+  color: #555;
+  line-height: 1.6;
+}
+
+.arrow-icon.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon {
+  transition: transform 0.3s ease;
+}
+
+.arrow-icon svg {
+  fill: #4caf50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .v-container {
+    flex-direction: column;
+    gap: 2rem; /* Smaller gap on smaller screens */
+  }
+
+  .v-container .image-container {
+    height: auto;
+    max-width: 100%;
+    border-radius: 50% 50% 0 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .accordion-header .ptext {
+    font-size: 1rem;
+  }
+
+  .icon {
+    padding: 8px;
+  }
+
+  .v-container .image-container {
+    max-width: 100%;
+    border-radius: 50% 50% 0 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .accordion-header .ptext {
+    font-size: 0.95rem;
+  }
+
+  .icon {
+    padding: 6px;
+  }
+
+  .v-container .image-container {
+    max-width: 100%;
+    border-radius: 50% 50% 0 0;
+  }
+}
