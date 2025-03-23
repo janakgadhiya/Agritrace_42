@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { FaGoogle, FaEye, FaEyeSlash } from "react-icons/fa";
-import { Link, useNavigate } from "react-router-dom"; // <-- Import useNavigate
+import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 
 const LoginForm = () => {
   const [showPassword, setShowPassword] = useState(false);
-  const [formData, setFormData] = useState({ email: "", password: "" });
-  const navigate = useNavigate(); // <-- Initialize navigate
+  const [formData, setFormData] = useState({ email: "", password: "", userType: "" });
+  const navigate = useNavigate();
 
   const togglePassword = () => setShowPassword(!showPassword);
 
@@ -16,12 +16,14 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Login Data:", formData);
 
-    // Simulate login success (you can replace this with your actual login logic)
-    if (formData.email && formData.password) {
-      // Navigate to home page after successful login
-      navigate("/home"); 
+    if (formData.email && formData.password && formData.userType) {
+      // Navigate based on user type
+      if (formData.userType === "farmer") {
+        navigate("/farmer/home");
+      } else if (formData.userType === "customer") {
+        navigate("/customer/home");
+      }
     } else {
       alert("Invalid credentials!");
     }
@@ -67,6 +69,21 @@ const LoginForm = () => {
                   {showPassword ? <FaEyeSlash /> : <FaEye />}
                 </span>
               </div>
+            </div>
+
+            {/* User Type Selection */}
+            <div className="input-group">
+              <label>User Type</label>
+              <select
+                name="userType"
+                value={formData.userType}
+                onChange={handleChange}
+                required
+              >
+                <option value="">Select your role</option>
+                <option value="farmer">Farmer</option>
+                <option value="customer">Customer</option>
+              </select>
             </div>
 
             <button type="submit" className="login-btn">

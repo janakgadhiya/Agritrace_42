@@ -9,7 +9,7 @@ const Footer = () => {
         
         {/* Left Section */}
         <div className="flexColStart fleft">
-          <img src="./logo.png" alt="Logo" width={110} />
+          <img src="/logo.png" alt="Logo" width={110} />
           <p>
             Our vision is to help people find the best place <br/>to live with ease and confidence.
           </p>

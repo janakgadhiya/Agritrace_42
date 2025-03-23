@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import "./App.css";
+import React, { useState } from "react";  // Importing useState
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import LoginForm from "./Authentication/Login/Login";
 import Signup from "./Authentication/Signup/Signup";
@@ -16,6 +15,9 @@ import AdminPanel from "./panels/admin/admin";
 import AdminLogin from "./panels/admin/adminlogin";
 import FarmerLogin from "./panels/farmer/farmerlogin";
 import FarmerPanel from "./panels/farmer/farmerpanel";
+import CustomerPanel from "./panels/customer/customerpanel";
+import FarmerHome from "./pages/Home/FramerHome";
+import CustomerHome from "./pages/Home/CustomerHome";
 
 // ✅ Home Page
 function Home() {
@@ -72,7 +74,10 @@ const router = createBrowserRouter([
   { path: "/aboutus", element: <AboutUs /> },
   { path: "/contactus", element: <ContactUs /> },
   { path: "/admin", element: <AdminWrapper /> },
-  { path: "/farmer", element: <FarmerWrapper /> }, // Farmer route added here
+  { path: "/farmer", element: <FarmerWrapper /> },
+  { path: "/customer", element: <CustomerPanel /> },
+  { path: "/farmer/home", element: <FarmerHome/> }, // Make sure FarmerHome is correctly imported
+  { path: "/customer/home", element: <CustomerHome/>}, // Make sure CustomerHome is correctly imported
 ]);
 
 // ✅ Main App

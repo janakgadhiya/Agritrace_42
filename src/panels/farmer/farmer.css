@@ -1,185 +1,162 @@
-/* Login Page */
-.farmer-login-container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: linear-gradient(135deg, #f1fff4, #ffffff);
-  }
-  
-  .farmer-login-form {
-    background-color: #fff;
-    padding: 35px 30px;
-    border-radius: 12px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
-    width: 350px;
-    text-align: center;
-    transition: 0.3s;
-  }
-  
-  .farmer-login-form:hover {
-    transform: translateY(-5px);
-  }
-  
-  .avatar-icon {
-    margin-bottom: 20px;
-    color: #4caf50;
-  }
-  
-  .farmer-login-form input {
-    width: 100%;
-    padding: 12px 14px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    transition: border-color 0.3s;
-  }
-  
-  .farmer-login-form input:focus {
-    border-color: #4caf50;
-    outline: none;
-  }
-  
-  .farmer-login-form button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4caf50;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .farmer-login-form button:hover {
-    background-color: #3a9b40;
-  }
-  
-  .error-msg {
-    color: red;
-    margin-bottom: 12px;
-  }
-  
-  /* Farmer Panel */
+/* Farmer Panel */
+.farmer-panel-container {
+  display: flex;
+  height: 100vh;
+  background-color: #121212; /* Dark background */
+}
+
+.farmer-sidebar {
+  width: 230px;
+  background-color: #1f1f1f; /* Dark sidebar */
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.farmer-sidebar h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.farmer-sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.farmer-sidebar ul li {
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 8px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.farmer-sidebar ul li:hover {
+  background-color: #333;
+  color: #4caf50;
+}
+
+.logout-btn {
+  margin-top: auto;
+  padding: 10px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.logout-btn:hover {
+  background-color: #4caf50;
+}
+
+.farmer-main {
+  flex-grow: 1;
+  padding: 30px;
+  background-color: #181818; /* Dark background for the main area */
+  color: #fff; /* White text for readability */
+  overflow-y: auto;
+}
+
+.panel-section {
+  background-color: #2a2a2a; /* Slightly lighter dark background */
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  margin: auto;
+}
+
+.panel-section input,
+.panel-section textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 1px solid #444;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+}
+
+.panel-section input:focus,
+.panel-section textarea:focus {
+  border-color: #4caf50;
+  outline: none;
+}
+
+.panel-section button {
+  padding: 10px 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.panel-section button:hover {
+  background-color: #3a9b40;
+}
+
+.farmer-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px auto;
+  border: 3px solid #fff;
+  object-fit: cover;
+}
+
+/* Order Details Section */
+.order-details {
+  padding: 15px;
+  background-color: #2a2a2a;
+  border-radius: 8px;
+}
+
+.order-details p {
+  margin: 10px 0;
+  color: #fff;
+}
+
+.order-details .button {
+  background-color: #4caf50;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.order-details .button:hover {
+  background-color: #3a9b40;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .farmer-panel-container {
-    display: flex;
-    height: 100vh;
-  }
-  
-  .farmer-sidebar {
-    width: 230px;
-    background-color: #4caf50;
-    color: white;
-    padding: 20px;
-    display: flex;
     flex-direction: column;
   }
-  
-  .farmer-sidebar h2 {
-    text-align: center;
-    margin-bottom: 30px;
-  }
-  
-  .farmer-sidebar ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .farmer-sidebar ul li {
-    margin-bottom: 20px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .farmer-sidebar ul li:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-    padding: 8px;
-    border-radius: 6px;
-  }
-  
-  .logout-btn {
-    margin-top: auto;
-    padding: 10px;
-    background-color: #fff;
-    color: #4caf50;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-  }
-  
-  .logout-btn:hover {
-    background-color: #f1f1f1;
-  }
-  
-  .farmer-main {
-    flex-grow: 1;
-    padding: 30px;
-    background-color: #f7fdf9;
-    overflow-y: auto;
-  }
-  
-  .panel-section {
-    background-color: #fff;
-    padding: 25px;
-    border-radius: 10px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
-    max-width: 600px;
-    margin: auto;
-  }
-  
-  .panel-section input {
+
+  .farmer-sidebar {
     width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    flex-direction: row;
+    overflow-x: auto;
+    justify-content: space-around;
   }
-  
-  .panel-section button {
-    padding: 10px 18px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: 0.3s;
+
+  .farmer-sidebar ul {
+    display: flex;
+    gap: 20px;
   }
-  
-  .panel-section button:hover {
-    background-color: #3a9b40;
+
+  .farmer-sidebar h2 {
+    display: none;
   }
-  .farmer-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    display: block;
-    margin: 0 auto 15px auto;
-    border: 3px solid white;
-    object-fit: cover;
-  }
-  
-  
-  /* Responsive */
-  @media (max-width: 768px) {
-    .farmer-panel-container {
-      flex-direction: column;
-    }
-  
-    .farmer-sidebar {
-      width: 100%;
-      flex-direction: row;
-      overflow-x: auto;
-      justify-content: space-around;
-    }
-  
-    .farmer-sidebar ul {
-      display: flex;
-      gap: 20px;
-    }
-  
-    .farmer-sidebar h2 {
-      display: none;
-    }
-  }
-  
+}

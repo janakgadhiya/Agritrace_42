@@ -17,18 +17,20 @@ const Header = () => {
     <section className="h-wrapper">
       <div className="flexCenter paddings innerWidth h-container">
         <div className="logo-section flexCenter">
-          <img className="imglogo" src="./logo.png" alt="logo" />
+          <img className="imglogo" src="/logo.png" alt="logo" />
           <span className="company-name">AgriTrace</span>
         </div>
 
         <OutsideClickHandler onOutsideClick={() => setMenuOpened(false)}>
           <div className="flexCenter h-menu" style={getMenuStyles(menuOpened)}>
             <Link to="/home">Home</Link>
-            <Link to="/fieldregister">Field Register</Link>
             <Link to="/aboutus">About Us</Link>
             <Link to="/contactus">Contact Us</Link>
             <button className="button sign-in-btn">
               <Link to="/signup">Sign Up</Link>
+            </button>
+            <button className="button sign-in-btn">
+            <Link to="/signup">Profile</Link>
             </button>
           </div>
         </OutsideClickHandler>
